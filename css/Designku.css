@@ -203,6 +203,8 @@ p {
     background: black;
     min-height: auto;
     overflow-x: hidden;
+    z-index: 10;
+    padding: 10rem;
 }
 .Cv img {
     max-width: 100%; /* membuat gambar responsif */
@@ -217,14 +219,14 @@ p {
     width: 100%;
     height: 100%;
     background: black;
-    transition: 3s;
+    transition: width 3s ease;
 }
 .Cv.show-animate .Showright-animate {
     width: 0;
 }
 .Cv .animate  {
     opacity: 0;
-    transition: opacity 5s ease;
+    transition: opacity 5s ease-in-out;
 }
 
 .Cv.show-animate .animate {
@@ -379,3 +381,162 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .logoku {
+        font-size: 1.8rem;
+    }
+
+    .header {
+        padding: 1rem 5%;
+    }
+
+    .navbar a {
+        padding: .15rem;
+    }
+
+    .navbar a i {
+        font-size: 1.4rem;
+    }
+    .Cv img {
+        max-width: 90%; /* Lebar gambar berkurang */
+        padding: 0.5rem; /* Mengurangi padding */
+    }
+
+    .Cv a:hover::after {
+        font-size: 1em; /* Ukuran teks hover lebih kecil */
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .logoku {
+        font-size: 1.5rem;
+    }
+
+    .navbar a i {
+        font-size: 1.2rem;
+    }
+    
+    .judul {
+        padding: 150px;
+    }
+    .Cv img {
+        max-width: 80%; /* Lebar gambar berkurang lagi */
+        padding: 0.5rem; /* Padding lebih kecil */
+    }
+
+    .Cv a:hover::after {
+        font-size: 0.9em; /* Ukuran teks hover lebih kecil */
+    }
+}
+
+@media (max-width: 462px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .logoku {
+        font-size: 1.4rem;
+    }
+
+    .navbar a i {
+        font-size: 1.1rem;
+    }
+
+    .judul {
+        padding: 120px;
+    }
+    
+    section {
+        padding: 7rem 5%;
+    }
+    
+    .Cv img, .cry img {
+        padding: 0.5rem;
+    }
+    .Cv img {
+        max-width: 75%; /* Lebar gambar lebih kecil */
+        padding: 0.5rem;
+    }
+
+    .Cv a:hover::after {
+        font-size: 0.8em; /* Ukuran teks hover lebih kecil */
+    }
+
+    .Cv h2 {
+        font-size: 1.5rem; /* Ukuran font judul lebih kecil */
+        text-align: center; /* Center alignment */
+    }
+}
+
+@media (max-width: 371px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .logoku {
+        font-size: 1.2rem;
+    }
+
+    .navbar a i {
+        font-size: 1rem;
+    }
+
+    .judul {
+        padding: 100px;
+    }
+
+    section {
+        padding: 5rem 3%;
+    }
+
+    .footer-text p {
+        font-size: 0.8rem;
+    }
+
+    .footer-iconTop a i {
+        font-size: 1.2rem;
+    }
+    .Cv img {
+        max-width: 70%; /* Lebar gambar lebih kecil */
+        padding: 0.4rem; /* Mengurangi padding */
+    }
+
+    .Cv a:hover::after {
+        font-size: 0.7em; /* Ukuran teks hover lebih kecil */
+    }
+
+    .Cv h2 {
+        font-size: 1.2rem; /* Ukuran font judul lebih kecil */
+        text-align: center; /* Center alignment */
+    }
+
+    .Cv a img {
+        padding: 0.3rem; /* Mengurangi padding gambar */
+    }
+}
+
+/* Footer styles */
