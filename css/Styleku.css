@@ -834,7 +834,7 @@ span{
         flex-direction: column;
     }
     .home-sci {
-        width: 160px;
+        width: auto;
     }
     .home-sci a {
         width: 38px;
