@@ -127,7 +127,7 @@ p {
 
 .judul  {
     display: flex;
-    background: url(/paralax/bg.png) no-repeat;
+    background: url(paralax/bg.png) no-repeat;
     background-size: cover;
     justify-content: center;
     padding: 270px;
