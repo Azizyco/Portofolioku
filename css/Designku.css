@@ -127,7 +127,7 @@ p {
 
 .judul  {
     display: flex;
-    background: url(bg.png) no-repeat;
+    background: url(paralax/bg.png) no-repeat;
     background-size: cover;
     justify-content: center;
     padding: 270px;
@@ -267,26 +267,6 @@ p {
     padding: 1rem;
     transition: filter 0.5s ease; /* Menambahkan transisi pada perubahan warna */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
