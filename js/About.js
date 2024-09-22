@@ -9,6 +9,7 @@ window.onscroll = () => {
         
         if (top >= offset && top < offset + height) {
             sec.classList.add('show-animate');
+            console.log('Animasi CV aktif');
         } else {
             sec.classList.remove('show-animate');
         }
@@ -16,6 +17,19 @@ window.onscroll = () => {
     })
 }
 
+
+if (window.innerWidth <= 768) {
+    sections.forEach(sec => {
+        sec.style.transition = 'transform 1s ease-out'; // Sesuaikan durasi untuk layar kecil
+    });
+}
+
+
+if (window.innerWidth <= 520) {
+    sections.forEach(sec => {
+        sec.style.transition = 'opacity 0.8s ease-out'; // Lebih cepat lagi di layar sangat kecil
+    });
+}
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -32,7 +46,7 @@ let navLinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop - 1000;
+        let offset = sec.offsetTop - 10;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
@@ -52,7 +66,7 @@ window.onscroll = () => {
  
 
     let header = document.querySelector('header');
-    header.classList.toggle('sticky',window.scrollY > 1000);
+    header.classList.toggle('sticky',window.scrollY > 10);
     
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
