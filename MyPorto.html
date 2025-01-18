@@ -1,347 +1,989 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolioku</title>
-    <link rel="stylesheet" href="css/Styleku.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <header class="header">
-        <a href="#" class="logo">Keyzz.<span class= "animate" style="--i:1;"></span></a>
-        <div class="bx bx-menu" id="menu-icon"><span class= "animate" style="--i:2;"></span></div>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#Project">Project</a>
-            <a href="#contact">Contact</a>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-            <span class="active-nav"></span>
-            <span class= "animate" style="--i:2;"></span>
-        </nav>
-    </header>
-    <section class="home show-animate" id="home">
-        <div class="home-content">
-            <h1>Hi, I'm <span>Keyzz</span> <span class= "animate" style="--i:2;"></span></h1>
-            <div class="text-animate">
-                <h3>Developer & Designer</h3>
-                <span class= "animate" style="--i:3;"></span>
-            </div>
-            <p>My name is Keyzz or you can also call me Miftah. I am very interested in coding and also the art of graphic design. and I have a hobby of making graphic designs, playing games, and learning to edit videos. If you are interested in me you can talk to me via social media or by clicking the button below or you can hire me on contact<span class= "animate" style="--i:4;"></span></p>
-            <div class="btn-box">
-                <a href="#contact" class="btn">Hire me</a>
-                <a href="https://wa.link/sfrf3d" class="btn">Let's Talk</a>
-                <span class= "animate" style="--i:5;"></span>
-            </div>
-        </div>
-        <div class="home-sci">
-            <a href="https://www.facebook.com/miftah.azizy.3/?locale=id_ID"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/mfth.zy/"><i class='bx bxl-instagram-alt' ></i></a>
-            <a href="https://www.linkedin.com/in/miftah-azizy-29913a2b5/"><i class='bx bxl-linkedin' ></i></a>
-            <a href="https://discord.gg/ARF2PxRF"><i class='bx bxl-discord-alt'></i></a>
-            <a href="https://www.canva.com/brand/join?token=ulZpUbwUxKdX5yobOucmEg&brandingVariant=edu&referrer=team-invite"><i class='bx bx-palette' ></i></a>
-            <span class= "animate" style="--i:6;"></span>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
 
-        </div>
-        <a href="https://www.instagram.com/mfth.zy/"><div class="home-imgHover"></div></a>
-        <span class= "animate home-img" style="--i:7;"></span>
-    </section>
+:root {
+    --bg-color:#081b29;
+    --second-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00c39c;
+}
 
-    <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
-        <div class="about-img">
-            <img src="tree.png" alt="">
-            <span class="circle spin"></span>
-        </div>
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
 
-        <div class="about-content">
-            <h3>Frontend Dev & Designer</h3>
-            <p>Hi, I am Keyzz or I can also be called Muhammad Miftah Nur Azizy. I was born in a small town in Indonesia, Central Java, Ambarawa City. I have many hobbies such as drawing, coding and playing games. I am currently studying at a state university in Yogyakarta which is also called the Blue Campus, it is Yogyakarta State University .and my life story can be said to be unique because......</p>
-
-            <div class="btn-box btns">
-                <a href="https://keyzzcorp.github.io/Portofolioku/About.html"class="btn">Read More</a>
-            </div>
-        
-        </div>
-    </section>
-
-      
-
-
-    <section class="education" id="education">
-        <h2 class="heading">My <span> Journey </span></h2>
-        <div class="education-row">
-            <div class="education-column">
-                <h3 class="title">Education</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2012 - 2017</div>
-                            <h3>Elementary School - SDIT Assalam Bandungan</h3>
-                            <p>Merupakan Sekolah dasar swasta islam terpadu yang berada di Kab Semarang di kota Bandungan yang dimana di sekolah tersebut memiliki program menghafal alquran minimal 3 juz dan juga sekolah yang cukup bergengsi</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2017 - 2020</div>
-                            <h3>Junior High School - SMPIT Assalam Bandungan Boarding School</h3>
-                            <p>Sekolah Menengah Pertama yang berasrama/pondok pesantren yang dimana memiliki program menghafalkan alquran minimal 5 juz & ilmu-ilmu islam  dan saya hanya bisa menyelesaikan 6juz saja disana.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2020 - 2023</div>
-                            <h3>Senior High School - SMAIT Ihsanul Fikri Mungkid</h3>
-                            <p>Sebuah Pondok pesantren moderen yang dimana menerapkan sistem pendidikan sma yang cukup bergengsi disanalah saya memulai dalam berorganisasi dan juga mempelajari ilmu-ilmu kepemimpinan.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2023 - Now</div>
-                            <h3>S1 Pendidikan Teknik Informatika - Universitas Negeri Yogyakarta</h3>
-                            <p>Universitas Negeri Yogyakarta (UNY) adalah salah satu perguruan tinggi negeri di Indonesia yang berlokasi di Yogyakarta dan Prodi saya adalah 
-                            yang dimana Pada tahun 2025 akan menjadi Program Studi terdepan Bidang Pendidikan Teknik Informatika di Indonesia yang mampu menghasilkan pendidik dan tenaga kependidikan teknik informatika yang unggul, kreatif, dan inovatif berlandaskan ketaqwaan, kemandirian, kecendekiaan, dan profesional.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="education-column">
-                <h3 class="title">Experience</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2021 - 2022</div>
-                            <h3>Humas - PMR Smait Ihsanulfikri   <a href="https://www.instagram.com/p/CfMex90PJ9c/?img_index=4" class="custom-button"><i class='bx bxl-instagram-alt'></i></a>  </h3>
-                            <p>Sebuah devisi yang bertugas penyampai informasi mengenai organisasi kepada publik dan juga saya pernah menjadi tim dekdok dalam berbagai event </p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2021 - 2022</div>
-                            <h3>Humas / Hubungan antar lembaga - MPK Smait Ihsanulfikri  <a href="https://www.instagram.com/p/Cce7H8XrcWv/?img_index=5" class="custom-button"><i class='bx bxl-instagram-alt'></i></a></h3>
-                            <p>Sebuah devisi yang bertugas Mengawasi, memantau dan membantu kinerja berbagai organisasi disekolah dalam melaksanakan program-programnya dan juga ikut serta dalam panitia pemilihan ketua organisasi dan saya juga pernah menjadi tim dekdok dalam event mpk</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2021 - 2022</div>
-                            <h3>Devisi IT Panitia PEMIRA (Pemilihan Raya) <a href="https://www.instagram.com/p/CiczFCLhflz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="custom-button"><i class='bx bxl-instagram-alt'></i></a></h3>
-                            <p>Sebuah devisi yang berada di panitia pemilihan ketua organisasi (PEMIRA) mengurusi desain dan dokumentasi,serta sosmed PEMIRA</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2022 - 2023</div>
-                            <h3>Tim Kreatif - Angkatan Resaka  <a href="https://www.instagram.com/resaka.gen/" class="custom-button"><i class='bx bxl-instagram-alt'></i></a></h3>
-                            <p>Sebuah devisi yang bertugas sebagai membuat suatu ide yang menarik dan dapat direalisasikan. Ide yang berasal dari seorang kreatif harus original dan inovatif. dan saya bagian desainer dan penyumbang ide</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Coding Skills</h3>
-                
-                <div class="skills-box">
-                    <div class="skills-content">
-
-                        <div class="progress">
-                            <h3> HTML <span>70%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3> CSS <span>25%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3> JavaScript <span>5%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3> java <span>40%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-column">
-                <h3 class="title">Professional Skills</h3>
-                
-                <div class="skills-box">
-                    <div class="skills-content">
-
-                        <div class="progress">
-                            <h3> Web Design <span>45%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3> Web Development <span>25%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3> Grapic Design <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3> Video Editor <span>35%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <section class="Project" id="Project"> 
-        <h2 class="heading">My <span> project </span></h2>
-        <div class="grid-container">   
-            <div class="project">
-                <div class="projectku">
-                    <div class="projectku-container">
-                        <img src="content/Desain UIUX.png" alt="">
-                        <a href="https://www.figma.com/file/NrJ6Y0EA7ObKMIdnYUn7St/Aplikasi-jual-account-game?type=design&node-id=0%3A1&mode=design&t=hshq07HV378psn8b-1">
-                            <div class="projectku-hover"><p>Figma</p></div> 
-                        </a>
-                    </div>
-                    
-                </div>
-                <p class="caption">Desain UI/UX</p>
-            </div>
-
-            <div class="project">
-                <div class="projectku">
-                    <div class="projectku-container">
-                        <img src="content/Desain cover dan isi IG.png" alt="">
-                        <a href="https://www.canva.com/design/DAFKJYNlDxM/ZxjOsoRe_vbzY_SAhDM79A/edit?utm_content=DAFKJYNlDxM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
-                            <div class="projectku-hover"><p>Canva</p></div> 
-                        </a>
-                    </div>
-                    
-                </div>
-                <p class="caption">Desain Cover & Konten IG</p>
-            </div>
-            <div class="project">
-                <div class="projectku">
-                    <div class="projectku-container">
-                        <img src="content/Desain iklan dan produk.png" alt="">
-                        <a href="https://www.canva.com/design/DAFfxa40XDQ/BMn6xOBbuHVzrcYYe0MIbQ/edit?utm_content=DAFfxa40XDQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
-                            <div class="projectku-hover"><p>Canva</p></div> 
-                        </a>
-                    </div>
-                    
-                </div>
-                <p class="caption">Desain Iklan & Product</p>
-            </div>  
-            <div class="project">
-                <div class="projectku">
-                    <div class="projectku-container">
-                        <img src="content/Desain web.png" alt="">
-                        <a href="/MyPorto.html">
-                            <div class="projectku-hover"><p>Web</p></div> 
-                        </a>
-                    </div>
-                    
-                </div>
-                <p class="caption">Website Portofolio</p>
-            </div>
-            <div class="project">
-                <div class="projectku">
-                    <div class="projectku-container">
-                        <img src="content/Webklsf.png" alt="">
-                        <a href="https://hikarizy.github.io/PublicClassF/ProjectUas.html">
-                            <div class="projectku-hover"><p>Web</p></div> 
-                        </a>
-                    </div>
-                    
-                </div>
-                <p class="caption">Website Kelas F 2023</p>
-            </div>
-            <div class="project">
-                <div class="projectku">
-                    <div class="projectku-container">
-                        <img src="content/Sertif.png" alt="">
-                        <a href="https://drive.google.com/drive/folders/1gJW-oLzmDFmWbW42jJDNbM9YVsE5NPGD?usp=sharing">
-                            <div class="projectku-hover"><p>Sertifikat</p></div> 
-                        </a>
-                    </div>
-                    
-                </div>
-                <p class="caption">Berbagai Sertifikat</p>
-            </div>
-            
-        </div>      
-    </section>
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+.header.sticky{
+    background: transparent;
+}
+.logo {
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.navbar {
+    position: relative;
+}
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+.navbar a:hover, 
+.navbar a.active {
+    color: var(--main-color);
+}
+#menu-icon {
+    position: relative;
+    font-size: 3.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.home {
+    display: flex;
+    align-items: center;
+    padding: 10 9%;
+    background: url(me.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home-content{
+    max-width: 60rem;
+    z-index: 99;
+}
+.home-content h1 {
+    position: relative;
+    display: inline-block;
+    font-size: 6.5rem;
+    font-weight: 700;
+    line-height: 1.3;
 
 
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-
-        <form action="https://formspree.io/f/xrgnqakw" method="POST">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text"placeholder="Full Name" name="name" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text"placeholder="Email Address" name="email" required>
-                    <span class="focus"></span>
-                </div>
-            </div>
-
-            <div class="textarea-field">
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Massage" required></textarea>
-                <span class="focus"></span>
-            </div>
-            
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
-            </div>
-        </form>
-    </section>
+}
+.home-content h1 span{
+    color: var(--text-color);
+}
+.home-content .text-animate {
+    position: relative;
+    width: 32.8rem;
+}
+.home-content .text-animate h3 {
+    font-size: 2.96rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color) ;
+    background-image: linear-gradient(var(--main-color),var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+    animation: homeBgText 6s linear infinite ;
+    animation-delay: 1s;
+}
+.home-content .text-animate h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+    animation: homeCursorText 6s linear infinite ;
+    animation-delay: 1s;
     
- 
+}
+.home-content p{
+    position: relative;
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+}
+.btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+.btn-box .btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn-box .btn:hover{
+    color: var(--main-color);
+}
+.btn-box .btn:nth-child(2){
+    background: transparent;
+    color: var(--main-color);
+}
+.btn-box .btn:nth-child(2):hover{
+    color: var(--bg-color);
+}
+.btn-box .btn:nth-child(2)::before{
+    background: var(--main-color);
+}
 
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by Keyzz | Portofolioku. </p>
-        </div>
-        <div class="footer-iconTop">
-            <a href="#"><i class='bx bxs-up-arrow' ></i></a>
-        </div>
-    </footer>
+.btn-box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box .btn:hover::before{
+    width: 100%;
+}
+.home-sci {
+    position: absolute;
+    bottom: 4rem;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.home-sci a {
+    position: relative;
+    display: inline flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: var(--bg-color);
+}
+.home-sci a::before  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover{
+    background: var(--bg-color);
+    opacity: .8;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding: 0;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+span{
+    color: var(--main-color);
+}
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: .0rem solid var(--main-color);
+}
+.about-content {
+    text-align: center;
+    padding: 6rem;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+}
+.btn-box.btns a::before {
+    background: var(--second-bg-color);
+}
 
 
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding: 0;
+}
+.education .education-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.education-row .education-column {
+    flex: 1 1 40rem;
+    padding: 6rem;
+}
+.education-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 3rem 2rem;
+}
+.education-column .education-box {
+    border-left: .2rem solid var(--main-color);
+}
+.education-box .education-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education-box .education-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+
+}
+
+.education-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.education-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.education-content .content:hover::before {
+    width: 100%;
+}
+.education-content .content .year {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+.education-content .content .year i {
+    padding-right: .5rem;
+}
+.education-content .content h3 {
+    font-size: 2rem;
+}
+.custom-button {
+    position: relative;
+    display: inline flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    background-color:transparent; /* Ganti kode warna dengan kode warna yang diinginkan */
+    padding: 17px 17px; /* Sesuaikan padding sesuai kebutuhan */
+    color:var(--text-color); 
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    font-size: 2rem;
+}
+.custom-button:hover {
+    color: var(--second-bg-color); /* Warna tombol saat dihover */
+    
+}
+.custom-button::before  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+.custom-button:hover::before{
+    width: 100%;
+}
+
+
+.education-content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+}
+.skills {
+    min-height: auto;
+    padding: 0rem;
+    background: var(--second-bg-color);
+}
+.skills .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.skills-row .skills-column {
+    flex: 1 1 5rem;
+    padding-bottom: 8rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
+}
+.skills-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+.skills-box .skills-content {
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.skills-box .skills-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.skills-box .skills-content:hover::before{
+    width: 100%;
+}
+.skills-content .progress {
+    padding: 1rem 0;
+}
+.skills-content .progress h3{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+.skills-content .progress h3 span{
+    color: var(--text-color);
+}
+.skills-content .progress .bar{
+    height: 2.5rem;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+    padding: .5rem;
+    margin: 1rem 0;
+}
+.skills-content .progress .bar span{
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: var(--main-color);
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+    width: 70%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+    width: 75%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+    width: 5%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+    width: 40%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+    width: 45%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+    width: 25%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+    width: 85%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+    width: 35%;
+}
+
+
+.Project {
+    background: var(--bg-color);
+    padding: 0;
+}
+
+.outer {
+    display: flex;
+    flex-wrap: wrap; /* Membuat elemen membungkus ke baris baru */
+    justify-content: center; /* Mengatur elemen berada di tengah */
+    gap: 10rem; /* Jarak antar elemen */
+    padding: 2rem; /* Padding luar */
+}
+
+
+.box-projek {
+    position: relative;
+    display: flex;
+    align-items: center;    
+    flex-direction: column; 
+    height: 500px;
+    width: 325px;
+    background: #112e4260; 
+    border-radius: 5%;
+    
+    border-color: #006851;
+    overflow: hidden; 
+    transform-style: preserve-3d;
+}
+.made-atas {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    background-color: #14283aee;
+    padding: 10px 325px;
+    max-width: 90%; /* Batasi lebar maksimum */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Menghindari teks memecah ke baris baru */
+}
+
+.made-bawah {
+    position: absolute;
+    bottom: 0;
+    background-color: #14283aee;
+    font-size: 8px;
+    padding: 10px 325px;
+    max-width: 90%; /* Batasi lebar maksimum */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Menghindari teks memecah ke baris baru */
+}
+
+.img-projek {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50% ,100px);
+    max-width: 250px;
+    transition: 0.5s;
+    z-index: 1;
+    
+}
+
+.box-projek:hover .img-projek {
+    transform: translate(-50%,-52%) scale(1.2);
+    transform-style:preserve-3d ;
+}
+
+.box-projek::before {
+    content: 'AZIZY'; 
+    position: absolute;
+    display: flex;
+    color: #00c39c;
+    font-size: 10em;
+    font-family: "Roboto Condensed", serif;
+    font-style: italic;
+    font-weight: 800;
+    top: 5%;
+    left: -100%;
+    transform: translate(-50%, 0);
+    opacity: 0; 
+    transition: 0.5s; 
+}
+
+.box-projek:hover::before {
+    opacity: 0.2; 
+    left: 50%;
+}
+
+.box-projek::after {
+    content: 'PROJECT';
+    position: absolute;
+    display: flex;
+    color: #00c39c;
+    font-size: 10em;
+    font-family: "Roboto Condensed", serif;
+    font-style: italic;
+    font-weight: 800;
+    top: 60%;
+    left: 450%;
+    transform: translate(-50%, 0);
+    opacity: 1; 
+    transition: 0.5s; 
+    
+}
+.box-projek:hover::after{
+    left: 50%;
+    opacity: 0.2;
+    
+}
+
+.nama-projek {
+    position: absolute;
+    top: 375px;
+    width: -100%; /* Perbaikan width */
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--text-color);
+    transform: translate3d( 0,0,-100px);
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Animasi smooth */
+    opacity: 0; /* Awalnya tidak terlihat */
+    z-index: 1;
+}
+
+.box-projek:hover .nama-projek {
+    transform: translateY(0);
+    opacity: 1; 
+}
+
+
+
+.btn-detail {
+    position: absolute;
+    top: 423px;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #00c39c;
+    color: var(--text-color);
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    z-index: 1;
+    transition: 0.5s;
+    transform: translate( 0,100px);
+    opacity: 0;
+}
+
+.btn-detail:hover {
+    background-color: #006851; 
+    transition: background-color 0.3s ease;
+}
+
+.box-projek:hover .btn-detail {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.contact {
+    padding: 0;
+    min-height: auto;
+    padding-bottom: 6rem;
+    background: var(--second-bg-color);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.contact form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder{
+    color: var(--text-color);
+}
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: .6rem;
+    z-index: -1;
+
+}
+.contact form .input-box .input-field input:focus,
+.contact form .input-box .input-field input:valid,
+.contact form .textarea-field textarea:focus,
+.contact form .textarea-field textarea:valid {
+    background-color: var(--bg-color); /* Atur warna latar belakang yang diinginkan saat difokuskan */
+    transition: .5s; /* Tambahkan transisi untuk perubahan warna latar belakang */
+}
+
+/* Fokus pada input saat input difokuskan */
+.contact form .input-box .input-field input:focus + .focus,
+.contact form .input-box .input-field input:valid + .focus,
+.contact form .textarea-field textarea:focus + .focus,
+.contact form .textarea-field textarea:valid + .focus {
+    width: 100%;
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+.contact form .textarea-field textarea {
+    resize: none;
+}
+.contact form .btn-box.btns .btn {
+    cursor: pointer;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #041522;
+
+}
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.footer-iconTop a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .3s;    
+}
+.footer-iconTop a:hover::before{
+    width: 100%;
+}
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+    transition: .5s;
+}
+.footer-iconTop a:hover i{
+    color: var(--main-color);
+}
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+}
+
+.animate.home-img {
+    width: 50%;
+}
+
+
+
+
+.logo .animate,
+.navbar .animate, 
+#menu-icon .animate,
+.home.show-animate .animate {
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+
+@media (max-width :1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width :991px) {
+    .header {
+        padding: 2rem 4%;
+    }
+    section {
+        padding: 10rem 4% 2rem;
+    }
+    .home {
+        padding: 0 4%;
+    }
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+@media (max-width :768px) {
+    .header {
+        background: var(--bg-color);
+    }
+
+    #menu-icon {
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--main-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay:.25s;
+    }
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+    .navbar .active-nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s ;
+    }
+
+    .navbar.active .active-nav {
+        left: 0;
+        transition-delay: .25s;
+    
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s ;
+    }
+    .navbar.active a {
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+    .home-imgHover {
+        pointer-events: none;
+        background: var(--bg-color);
+        opacity: .6;
+    }
+}
+@media (max-width :520px) {
+    html {
+        font-size: 50%;
+    }
+    .home-content h1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .home-sci {
+        width: auto;
+    }
+    .home-sci a {
+        width: 38px;
+        height: 38px;
+    }
+}
+@media (max-width :462px) {
+    .home-content h1 {
+        font-size: 5.2rem;
+    }
+
+    .education {
+        padding:0;
+    }
+
+    .contact form .input-box .input-field {
+        width: 100%;
+    }
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+@media (max-width :371px) {
+    .home {
+        justify-content: center;
+    }
+    .home-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+}
+
+@keyframes homeBgText {
+    0%,10%,100% {
+        background-position:-33rem 0;
+    }
+
+    65%,85% {
+        background-position: 0 0;
+    }
+}
+@keyframes homeCursorText {
+    0%,10%,100% {
+        width: 0;
+    }
+
+    65%,78%,85% {
+        width: 100%;
+        opacity: 1;
+    }
+    75%,81% {
+        opacity: 0;
+    }
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
