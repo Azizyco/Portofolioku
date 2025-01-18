@@ -1,989 +1,315 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-}
-
-:root {
-    --bg-color:#081b29;
-    --second-bg-color:#112e42;
-    --text-color:#ededed;
-    --main-color:#00c39c;
-}
-
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-body{
-    background: var(--bg-color);
-    color: var(--text-color);
-}
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 9%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    transition: .3s;
-}
-.header.sticky{
-    background: transparent;
-}
-.logo {
-    position: relative;
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-}
-.navbar {
-    position: relative;
-}
-.navbar a{
-    font-size: 1.7rem;
-    color: var(--text-color);
-    font-weight: 500;
-    margin-left: 3.5rem;
-    transition: .3s;
-}
-.navbar a:hover, 
-.navbar a.active {
-    color: var(--main-color);
-}
-#menu-icon {
-    position: relative;
-    font-size: 3.5rem;
-    color: var(--text-color);
-    cursor: pointer;
-    display: none;
-}
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
-}
-.home {
-    display: flex;
-    align-items: center;
-    padding: 10 9%;
-    background: url(me.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.home-content{
-    max-width: 60rem;
-    z-index: 99;
-}
-.home-content h1 {
-    position: relative;
-    display: inline-block;
-    font-size: 6.5rem;
-    font-weight: 700;
-    line-height: 1.3;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolioku</title>
+    <link rel="stylesheet" href="css/Styleku.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Azizy.co<span class= "animate" style="--i:1;"></span></a>
+        <div class="bx bx-menu" id="menu-icon"><span class= "animate" style="--i:2;"></span></div>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#Project">Project</a>
+            <a href="#contact">Contact</a>
 
 
-}
-.home-content h1 span{
-    color: var(--text-color);
-}
-.home-content .text-animate {
-    position: relative;
-    width: 32.8rem;
-}
-.home-content .text-animate h3 {
-    font-size: 2.96rem;
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: .7px var(--main-color) ;
-    background-image: linear-gradient(var(--main-color),var(--main-color));
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: -33rem 0;
-    animation: homeBgText 6s linear infinite ;
-    animation-delay: 1s;
-}
-.home-content .text-animate h3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    border-right: 2px solid var(--main-color);
-    z-index: -1;
-    animation: homeCursorText 6s linear infinite ;
-    animation-delay: 1s;
+            <span class="active-nav"></span>
+            <span class= "animate" style="--i:2;"></span>
+        </nav>
+    </header>
+    <section class="home show-animate" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Miftah</span> <span class= "animate" style="--i:2;"></span></h1>
+            <div class="text-animate">
+                <h3>Frontend & Designer</h3>
+                <span class= "animate" style="--i:3;"></span>
+            </div>
+            <p>I'am Miftah. I am very interested in coding and also the art of graphic design. and I have a hobby of making graphic designs, playing games, and learning to edit videos. If you are interested in me you can talk to me via social media or by clicking the button below or you can hire me on contact<span class= "animate" style="--i:4;"></span></p>
+            <div class="btn-box">
+                <a href="#contact" class="btn">Hire me</a>
+                <a href="https://wa.link/sfrf3d" class="btn">Let's Talk</a>
+                <span class= "animate" style="--i:5;"></span>
+            </div>
+        </div>
+        <div class="home-sci">
+            <a href="https://www.facebook.com/miftah.azizy.3/?locale=id_ID"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/mfth.zy/"><i class='bx bxl-instagram-alt' ></i></a>
+            <a href="https://www.linkedin.com/in/miftah-azizy-29913a2b5/"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://discord.gg/ARF2PxRF"><i class='bx bxl-discord-alt'></i></a>
+            <a href="https://www.canva.com/brand/join?token=ulZpUbwUxKdX5yobOucmEg&brandingVariant=edu&referrer=team-invite"><i class='bx bx-palette' ></i></a>
+            <span class= "animate" style="--i:6;"></span>
+
+        </div>
+        <a href="https://www.instagram.com/mfth.zy/"><div class="home-imgHover"></div></a>
+        <span class= "animate home-img" style="--i:7;"></span>
+        
+    </section>
+
+    <section class="about" id="about">
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#081b29" fill-opacity="1" d="M0,192L14.1,186.7C28.2,181,56,171,85,186.7C112.9,203,141,245,169,224C197.6,203,226,117,254,112C282.4,107,311,181,339,224C367.1,267,395,277,424,277.3C451.8,277,480,267,508,250.7C536.5,235,565,213,593,186.7C621.2,160,649,128,678,128C705.9,128,734,160,762,160C790.6,160,819,128,847,122.7C875.3,117,904,139,932,122.7C960,107,988,53,1016,74.7C1044.7,96,1073,192,1101,229.3C1129.4,267,1158,245,1186,218.7C1214.1,192,1242,160,1271,154.7C1298.8,149,1327,171,1355,149.3C1383.5,128,1412,64,1426,32L1440,0L1440,0L1425.9,0C1411.8,0,1384,0,1355,0C1327.1,0,1299,0,1271,0C1242.4,0,1214,0,1186,0C1157.6,0,1129,0,1101,0C1072.9,0,1045,0,1016,0C988.2,0,960,0,932,0C903.5,0,875,0,847,0C818.8,0,791,0,762,0C734.1,0,706,0,678,0C649.4,0,621,0,593,0C564.7,0,536,0,508,0C480,0,452,0,424,0C395.3,0,367,0,339,0C310.6,0,282,0,254,0C225.9,0,198,0,169,0C141.2,0,113,0,85,0C56.5,0,28,0,14,0L0,0Z"></path></svg>
+        <h2 data-aos="fade-down" data-aos-duration="1500" class="heading">About <span>Me</span></h2>
+        <div data-aos="zoom-in-down" data-aos-duration="1500" class="about-img">
+            <img src="tree.png" alt="">
+            <span class="circle spin"></span>
+        </div>
+
+        <div class="about-content">
+            <h3 data-aos="fade-right" data-aos-duration="3000"  >Frontend Dev & Designer</h3>
+            <p data-aos="fade-left" data-aos-duration="3000" data-aos-delay="200"> I'am  Muhammad Miftah Nur Azizy. I was born in a small town in Indonesia, Central Java, Ambarawa City. I have many hobbies such as drawing, coding and playing games. I am currently studying at a state university in Yogyakarta which is also called the Blue Campus, it is Yogyakarta State University .and my life story can be said to be unique because......</p>
+
+            <div class="btn-box btns">
+                <a data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000" href="https://Azizycorp.github.io/Portofolioku/About.html"class="btn">Read More</a>
+            </div>
+        
+        </div>
+ 
+
+
+    </section>
+
+      
+
+
+    <section class="education" id="education">
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#112e42" fill-opacity="1" d="M0,192L24,208C48,224,96,256,144,277.3C192,299,240,309,288,277.3C336,245,384,171,432,149.3C480,128,528,160,576,181.3C624,203,672,213,720,186.7C768,160,816,96,864,96C912,96,960,160,1008,181.3C1056,203,1104,181,1152,154.7C1200,128,1248,96,1296,117.3C1344,139,1392,213,1416,250.7L1440,288L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
+        <h2 data-aos="fade-down" data-aos-duration="1500" class="heading">My <span> Journey </span></h2>
+        <div class="education-row">
+            <div class="education-column">
+                <h3 data-aos="fade-right" data-aos-duration="3000" class="title">Education</h3>
+
+                <div class="education-box">
+                    <div  class="education-content">
+                        <div data-aos="flip-down" data-aos-duration="2500" class="content">
+                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2012 - 2017</div>
+                            <h3>Elementary School - SDIT Assalam Bandungan</h3>
+                            <p>Merupakan Sekolah dasar swasta islam terpadu yang berada di Kab Semarang di kota Bandungan yang dimana di sekolah tersebut memiliki program menghafal alquran minimal 3 juz dan juga sekolah yang cukup bergengsi</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div data-aos="flip-down" data-aos-duration="2500" class="content">
+                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2017 - 2020</div>
+                            <h3>Junior High School - SMPIT Assalam Bandungan Boarding School</h3>
+                            <p>Sekolah Menengah Pertama yang berasrama/pondok pesantren yang dimana memiliki program menghafalkan alquran minimal 5 juz & ilmu-ilmu islam  dan saya hanya bisa menyelesaikan 6juz saja disana.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div data-aos="flip-down" data-aos-duration="2500" class="content">
+                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2020 - 2023</div>
+                            <h3>Senior High School - SMAIT Ihsanul Fikri Mungkid</h3>
+                            <p>Sebuah Pondok pesantren moderen yang dimana menerapkan sistem pendidikan sma yang cukup bergengsi disanalah saya memulai dalam berorganisasi dan juga mempelajari ilmu-ilmu kepemimpinan.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div data-aos="flip-down" data-aos-duration="2500" class="content">
+                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2023 - Now</div>
+                            <h3>S1 Pendidikan Teknik Informatika - Universitas Negeri Yogyakarta</h3>
+                            <p>Universitas Negeri Yogyakarta (UNY) adalah salah satu perguruan tinggi negeri di Indonesia yang berlokasi di Yogyakarta dan Prodi saya adalah 
+                            yang dimana Pada tahun 2025 akan menjadi Program Studi terdepan Bidang Pendidikan Teknik Informatika di Indonesia yang mampu menghasilkan pendidik dan tenaga kependidikan teknik informatika yang unggul, kreatif, dan inovatif berlandaskan ketaqwaan, kemandirian, kecendekiaan, dan profesional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-column">
+                <h3 data-aos="fade-left" data-aos-duration="3000"class="title">Experience</h3>
+
+                <div class="education-box">
+                    <div class="education-content">
+                        <div data-aos="flip-up" data-aos-duration="2500" class="content">
+                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2021 - 2022</div>
+                            <h3>Humas - PMR Smait Ihsanulfikri   <a href="https://www.instagram.com/p/CfMex90PJ9c/?img_index=4" class="custom-button"><i class='bx bxl-instagram-alt'></i></a>  </h3>
+                            <p>Sebuah devisi yang bertugas penyampai informasi mengenai organisasi kepada publik dan juga saya pernah menjadi tim dekdok dalam berbagai event </p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div data-aos="flip-up" data-aos-duration="2500" class="content">
+                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2021 - 2022</div>
+                            <h3>Humas / Hubungan antar lembaga - MPK Smait Ihsanulfikri  <a href="https://www.instagram.com/p/Cce7H8XrcWv/?img_index=5" class="custom-button"><i class='bx bxl-instagram-alt'></i></a></h3>
+                            <p>Sebuah devisi yang bertugas Mengawasi, memantau dan membantu kinerja berbagai organisasi disekolah dalam melaksanakan program-programnya dan juga ikut serta dalam panitia pemilihan ketua organisasi dan saya juga pernah menjadi tim dekdok dalam event mpk</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div data-aos="flip-up" data-aos-duration="2500" class="content">
+                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2021 - 2022</div>
+                            <h3>Devisi IT Panitia PEMIRA (Pemilihan Raya) <a href="https://www.instagram.com/p/CiczFCLhflz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="custom-button"><i class='bx bxl-instagram-alt'></i></a></h3>
+                            <p>Sebuah devisi yang berada di panitia pemilihan ketua organisasi (PEMIRA) mengurusi desain dan dokumentasi,serta sosmed PEMIRA</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div data-aos="flip-up" data-aos-duration="2500" class="content">
+                            <div class="year"><i class='bx bxs-calendar-alt' ></i>2022 - 2023</div>
+                            <h3>Tim Kreatif - Angkatan Resaka  <a href="https://www.instagram.com/resaka.gen/" class="custom-button"><i class='bx bxl-instagram-alt'></i></a></h3>
+                            <p>Sebuah devisi yang bertugas sebagai membuat suatu ide yang menarik dan dapat direalisasikan. Ide yang berasal dari seorang kreatif harus original dan inovatif. dan saya bagian desainer dan penyumbang ide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#081b29" fill-opacity="1" d="M0,64L21.8,80C43.6,96,87,128,131,165.3C174.5,203,218,245,262,234.7C305.5,224,349,160,393,149.3C436.4,139,480,181,524,181.3C567.3,181,611,139,655,106.7C698.2,75,742,53,785,48C829.1,43,873,53,916,58.7C960,64,1004,64,1047,58.7C1090.9,53,1135,43,1178,58.7C1221.8,75,1265,117,1309,128C1352.7,139,1396,117,1418,106.7L1440,96L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"></path></svg>
+        <h2 data-aos="fade-down" data-aos-duration="1500" class="heading">My <span>Skills</span></h2>
+
+        <div class="skills-row">
+            <div data-aos="fade-right" data-aos-duration="3000" class="skills-column">
+                <h3 class="title">Coding Skills</h3>
+                
+                <div data-aos="flip-right" data-aos-duration="2500" class="skills-box">
+                    <div class="skills-content">
+
+                        <div class="progress">
+                            <h3> HTML <span>70%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3> CSS <span>75%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3> JavaScript <span>5%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3> java <span>40%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="3000" class="skills-column">
+                <h3 class="title">Professional Skills</h3>
+                
+                <div data-aos="flip-left" data-aos-duration="2500" class="skills-box">
+                    <div class="skills-content">
+
+                        <div class="progress">
+                            <h3> Web Design <span>45%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3> Web Development <span>25%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3> Grapic Design <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3> Video Editor <span>35%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="Project" id="Project"> 
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#112e42" fill-opacity="1" d="M0,256L21.8,240C43.6,224,87,192,131,181.3C174.5,171,218,181,262,181.3C305.5,181,349,171,393,144C436.4,117,480,75,524,90.7C567.3,107,611,181,655,213.3C698.2,245,742,235,785,240C829.1,245,873,267,916,250.7C960,235,1004,181,1047,138.7C1090.9,96,1135,64,1178,64C1221.8,64,1265,96,1309,117.3C1352.7,139,1396,149,1418,154.7L1440,160L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"></path></svg>
+        <h2 data-aos="fade-down" data-aos-duration="1500" class="heading">My <span> Project </span></h2>
+        <div  data-aos="fade-down-right" data-aos-duration="2000" class="outer">
+            <div class="box-projek">
+                <h6 class="made-atas">Created in Figma</h6>
+                <img src="/content/1.png" alt="UIUX" class="img-projek">
+                <h4 class="nama-projek">Desain UIUX</h4>
+                <a href="#" class="btn-detail">Detail</a>
+                <h6 class="made-bawah">On January 19 2024</h6>
+            </div>
+            
+        </div>
+      
+        
+        
+    </section>
+
+
+    <section class="contact" id="contact">
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#081b29" fill-opacity="1" d="M0,224L40,202.7C80,181,160,139,240,133.3C320,128,400,160,480,170.7C560,181,640,171,720,154.7C800,139,880,117,960,96C1040,75,1120,53,1200,80C1280,107,1360,181,1400,218.7L1440,256L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+        <h2 data-aos="fade-down" data-aos-duration="1500" class="heading">Contact <span>Me</span></h2>
+
+        <form action="https://formspree.io/f/xrgnqakw" method="POST">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text"placeholder="Full Name" name="name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text"placeholder="Email Address" name="email" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Massage" required></textarea>
+                <span class="focus"></span>
+            </div>
+            
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </section>
     
-}
-.home-content p{
-    position: relative;
-    font-size: 1.6rem;
-    margin: 2rem 0 4rem;
-}
-.btn-box{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 34.5rem;
-    height: 5rem;
-}
-.btn-box .btn{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 100%;
-    background: var(--main-color);
-    border: .2rem solid var(--main-color);
-    border-radius: .8rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    color: var(--bg-color);
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-.btn-box .btn:hover{
-    color: var(--main-color);
-}
-.btn-box .btn:nth-child(2){
-    background: transparent;
-    color: var(--main-color);
-}
-.btn-box .btn:nth-child(2):hover{
-    color: var(--bg-color);
-}
-.btn-box .btn:nth-child(2)::before{
-    background: var(--main-color);
-}
+ 
 
-.btn-box .btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-.btn-box .btn:hover::before{
-    width: 100%;
-}
-.home-sci {
-    position: absolute;
-    bottom: 4rem;
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-.home-sci a {
-    position: relative;
-    display: inline flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 20px;
-    color: var(--main-color);
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-.home-sci a:hover{
-    color: var(--bg-color);
-}
-.home-sci a::before  {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: var(--main-color);
-    z-index: -1;
-    transition: .5s;
-}
-.home-sci a:hover::before{
-    width: 100%;
-}
-.home-imgHover{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 48%;
-    height: 100%;
-    background: transparent;
-    transition: 3s;
-}
-
-.home-imgHover:hover{
-    background: var(--bg-color);
-    opacity: .8;
-}
-
-.about {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    background: var(--second-bg-color);
-    padding: 0;
-}
-
-.heading {
-    font-size: 5rem;
-    margin-top: 6rem;
-    margin-bottom: 5rem;
-    text-align: center;
-}
-span{
-    color: var(--main-color);
-}
-.about-img {
-    position: relative;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.about-img img {
-    width: 90%;
-    border-radius: 50%;
-    border: .0rem solid var(--main-color);
-}
-.about-content {
-    text-align: center;
-    padding: 6rem;
-}
-.about-content h3{
-    font-size: 2.6rem;
-}
-.about-content p{
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-}
-.btn-box.btns {
-    display: inline-block;
-    width: 15rem;
-}
-.btn-box.btns a::before {
-    background: var(--second-bg-color);
-}
-
-
-
-
-
-.education {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: auto;
-    padding: 0;
-}
-.education .education-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-}
-.education-row .education-column {
-    flex: 1 1 40rem;
-    padding: 6rem;
-}
-.education-column .title {
-    font-size: 2.5rem;
-    margin: 0 0 3rem 2rem;
-}
-.education-column .education-box {
-    border-left: .2rem solid var(--main-color);
-}
-.education-box .education-content {
-    position: relative;
-    padding-left: 2rem;
-}
-
-.education-box .education-content::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -1.1rem;
-    width: 2rem;
-    height: 2rem;
-    background: var(--main-color);
-    border-radius: 50%;
-
-}
-
-.education-content .content {
-    position: relative;
-    padding: 1.5rem;
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-    margin-bottom: 2rem;
-    overflow: hidden;
-}
-.education-content .content::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--second-bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-.education-content .content:hover::before {
-    width: 100%;
-}
-.education-content .content .year {
-    font-size: 1.5rem;
-    color: var(--main-color);
-    padding-bottom: .5rem;
-}
-.education-content .content .year i {
-    padding-right: .5rem;
-}
-.education-content .content h3 {
-    font-size: 2rem;
-}
-.custom-button {
-    position: relative;
-    display: inline flex;
-    justify-content: center;
-    align-items: center;
-    width: 15px;
-    height: 15px;
-    background-color:transparent; /* Ganti kode warna dengan kode warna yang diinginkan */
-    padding: 17px 17px; /* Sesuaikan padding sesuai kebutuhan */
-    color:var(--text-color); 
-    border-radius: 50%;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    font-size: 2rem;
-}
-.custom-button:hover {
-    color: var(--second-bg-color); /* Warna tombol saat dihover */
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Azizy | Portofolioku. </p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bxs-up-arrow' ></i></a>
+        </div>
+    </footer>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     
-}
-.custom-button::before  {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: var(--main-color);
-    z-index: -1;
-    transition: .5s;
-}
-.custom-button:hover::before{
-    width: 100%;
-}
+    <script>
+        gsap.from('.logo'  ,  { duration:2.5, ease: "expoScale(0.5,7,none)",y: -500 } )
+        gsap.from('.navbar'  ,  { duration:2.5, ease: "rough({ template:none.out, strength: 1, points:20, taper:none, randomize:true, clamp:false })", y: -250 } )
+    </script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelector(".box-projek"), {
+		max: 25,
+		speed: 400
+	});
+	
+	//It also supports NodeList
+	VanillaTilt.init(document.querySelectorAll(".box-projek"));
+</script>
 
-.education-content .content p {
-    font-size: 1.6rem;
-    padding-top: .5rem;
-}
-.skills {
-    min-height: auto;
-    padding: 0rem;
-    background: var(--second-bg-color);
-}
-.skills .skills-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-.skills-row .skills-column {
-    flex: 1 1 5rem;
-    padding-bottom: 8rem;
-    padding-right: 6rem;
-    padding-left: 6rem;
-}
-.skills-column .title {
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem;
-}
-.skills-box .skills-content {
-    position: relative;
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-    padding: .5rem 1.5rem;
-    z-index: 1;
-    overflow: hidden;
-}
-.skills-box .skills-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-.skills-box .skills-content:hover::before{
-    width: 100%;
-}
-.skills-content .progress {
-    padding: 1rem 0;
-}
-.skills-content .progress h3{
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: space-between;
-}
-.skills-content .progress h3 span{
-    color: var(--text-color);
-}
-.skills-content .progress .bar{
-    height: 2.5rem;
-    border-radius: .6rem;
-    border: .2rem solid var(--main-color);
-    padding: .5rem;
-    margin: 1rem 0;
-}
-.skills-content .progress .bar span{
-    display: block;
-    height: 100%;
-    border-radius: .3rem;
-    background: var(--main-color);
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-    width: 70%;
-}
-.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 75%;
-}
-.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 5%;
-}
-.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 40%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 45%;
-}
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 25%;
-}
-.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 85%;
-}
-.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 35%;
-}
-
-
-.Project {
-    background: var(--bg-color);
-    padding: 0;
-}
-
-.outer {
-    display: flex;
-    flex-wrap: wrap; /* Membuat elemen membungkus ke baris baru */
-    justify-content: center; /* Mengatur elemen berada di tengah */
-    gap: 10rem; /* Jarak antar elemen */
-    padding: 2rem; /* Padding luar */
-}
-
-
-.box-projek {
-    position: relative;
-    display: flex;
-    align-items: center;    
-    flex-direction: column; 
-    height: 500px;
-    width: 325px;
-    background: #112e4260; 
-    border-radius: 5%;
-    
-    border-color: #006851;
-    overflow: hidden; 
-    transform-style: preserve-3d;
-}
-.made-atas {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 10px;
-    background-color: #14283aee;
-    padding: 10px 325px;
-    max-width: 90%; /* Batasi lebar maksimum */
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap; /* Menghindari teks memecah ke baris baru */
-}
-
-.made-bawah {
-    position: absolute;
-    bottom: 0;
-    background-color: #14283aee;
-    font-size: 8px;
-    padding: 10px 325px;
-    max-width: 90%; /* Batasi lebar maksimum */
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap; /* Menghindari teks memecah ke baris baru */
-}
-
-.img-projek {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%,-50% ,100px);
-    max-width: 250px;
-    transition: 0.5s;
-    z-index: 1;
-    
-}
-
-.box-projek:hover .img-projek {
-    transform: translate(-50%,-52%) scale(1.2);
-    transform-style:preserve-3d ;
-}
-
-.box-projek::before {
-    content: 'AZIZY'; 
-    position: absolute;
-    display: flex;
-    color: #00c39c;
-    font-size: 10em;
-    font-family: "Roboto Condensed", serif;
-    font-style: italic;
-    font-weight: 800;
-    top: 5%;
-    left: -100%;
-    transform: translate(-50%, 0);
-    opacity: 0; 
-    transition: 0.5s; 
-}
-
-.box-projek:hover::before {
-    opacity: 0.2; 
-    left: 50%;
-}
-
-.box-projek::after {
-    content: 'PROJECT';
-    position: absolute;
-    display: flex;
-    color: #00c39c;
-    font-size: 10em;
-    font-family: "Roboto Condensed", serif;
-    font-style: italic;
-    font-weight: 800;
-    top: 60%;
-    left: 450%;
-    transform: translate(-50%, 0);
-    opacity: 1; 
-    transition: 0.5s; 
-    
-}
-.box-projek:hover::after{
-    left: 50%;
-    opacity: 0.2;
-    
-}
-
-.nama-projek {
-    position: absolute;
-    top: 375px;
-    width: -100%; /* Perbaikan width */
-    text-align: center;
-    font-size: 4em;
-    font-weight: bold;
-    font-style: italic;
-    color: var(--text-color);
-    transform: translate3d( 0,0,-100px);
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Animasi smooth */
-    opacity: 0; /* Awalnya tidak terlihat */
-    z-index: 1;
-}
-
-.box-projek:hover .nama-projek {
-    transform: translateY(0);
-    opacity: 1; 
-}
-
-
-
-.btn-detail {
-    position: absolute;
-    top: 423px;
-    text-decoration: none;
-    padding: 10px 30px;
-    background-color: #00c39c;
-    color: var(--text-color);
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: bold;
-    z-index: 1;
-    transition: 0.5s;
-    transform: translate( 0,100px);
-    opacity: 0;
-}
-
-.btn-detail:hover {
-    background-color: #006851; 
-    transition: background-color 0.3s ease;
-}
-
-.box-projek:hover .btn-detail {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-
-
-
-
-
-
-.contact {
-    padding: 0;
-    min-height: auto;
-    padding-bottom: 6rem;
-    background: var(--second-bg-color);
-}
-
-.contact form {
-    max-width: 70rem;
-    margin: 0 auto;
-    text-align: center;
-}
-.contact form .input-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-}
-.contact form .input-box .input-field {
-    position: relative;
-    width: 49%;
-    margin: .8rem 0;
-}
-.contact form .input-box .input-field input,
-.contact form .textarea-field textarea {
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: transparent;
-    border-radius: .6rem;
-    border: .2rem solid var(--main-color);
-}
-.contact form .input-box .input-field input::placeholder,
-.contact form .textarea-field textarea::placeholder{
-    color: var(--text-color);
-}
-.contact form .focus {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    border-radius: .6rem;
-    z-index: -1;
-
-}
-.contact form .input-box .input-field input:focus,
-.contact form .input-box .input-field input:valid,
-.contact form .textarea-field textarea:focus,
-.contact form .textarea-field textarea:valid {
-    background-color: var(--bg-color); /* Atur warna latar belakang yang diinginkan saat difokuskan */
-    transition: .5s; /* Tambahkan transisi untuk perubahan warna latar belakang */
-}
-
-/* Fokus pada input saat input difokuskan */
-.contact form .input-box .input-field input:focus + .focus,
-.contact form .input-box .input-field input:valid + .focus,
-.contact form .textarea-field textarea:focus + .focus,
-.contact form .textarea-field textarea:valid + .focus {
-    width: 100%;
-}
-
-.contact form .textarea-field {
-    position: relative;
-    margin: .8rem 0 2.7rem;
-    display: flex;
-}
-.contact form .textarea-field textarea {
-    resize: none;
-}
-.contact form .btn-box.btns .btn {
-    cursor: pointer;
-}
-
-
-.footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: #041522;
-
-}
-.footer-text p {
-    font-size: 1.6rem;
-}
-
-.footer-iconTop a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .8rem;
-    background: var(--main-color);
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-    z-index: 1;
-    overflow: hidden;
-}
-.footer-iconTop a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--second-bg-color);
-    z-index: -1;
-    transition: .3s;    
-}
-.footer-iconTop a:hover::before{
-    width: 100%;
-}
-.footer-iconTop a i {
-    font-size: 2.4rem;
-    color: var(--bg-color);
-    transition: .5s;
-}
-.footer-iconTop a:hover i{
-    color: var(--main-color);
-}
-.animate {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    z-index: 98;
-}
-
-.animate.home-img {
-    width: 50%;
-}
-
-
-
-
-.logo .animate,
-.navbar .animate, 
-#menu-icon .animate,
-.home.show-animate .animate {
-    animation: showRight 1s ease forwards;
-    animation-delay: calc(.3s * var(--i));
-}
-
-
-@media (max-width :1200px) {
-    html {
-        font-size: 55%;
-    }
-}
-@media (max-width :991px) {
-    .header {
-        padding: 2rem 4%;
-    }
-    section {
-        padding: 10rem 4% 2rem;
-    }
-    .home {
-        padding: 0 4%;
-    }
-    .footer {
-        padding: 2rem 4%;
-    }
-}
-@media (max-width :768px) {
-    .header {
-        background: var(--bg-color);
-    }
-
-    #menu-icon {
-        display: block;
-    }
-    .navbar{
-        position: absolute;
-        top: 100%;
-        left: -100%;
-        width: 100%;
-        padding: 1rem 4%;
-        background: var(--main-color);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        z-index: 1;
-        transition: .25s ease;
-        transition-delay:.25s;
-    }
-    .navbar.active {
-        left: 0;
-        transition-delay: 0s;
-    }
-    .navbar .active-nav {
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        z-index: -1;
-        transition: .25s ease;
-        transition-delay: 0s ;
-    }
-
-    .navbar.active .active-nav {
-        left: 0;
-        transition-delay: .25s;
-    
-    }
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        transform: translateX(-20rem);
-        transition: .25s ease;
-        transition-delay: 0s ;
-    }
-    .navbar.active a {
-        transform: translateX(0);
-        transition-delay: .25s;
-    }
-    .home-imgHover {
-        pointer-events: none;
-        background: var(--bg-color);
-        opacity: .6;
-    }
-}
-@media (max-width :520px) {
-    html {
-        font-size: 50%;
-    }
-    .home-content h1 {
-        display: flex;
-        flex-direction: column;
-    }
-    .home-sci {
-        width: auto;
-    }
-    .home-sci a {
-        width: 38px;
-        height: 38px;
-    }
-}
-@media (max-width :462px) {
-    .home-content h1 {
-        font-size: 5.2rem;
-    }
-
-    .education {
-        padding:0;
-    }
-
-    .contact form .input-box .input-field {
-        width: 100%;
-    }
-    .footer {
-        flex-direction: column-reverse;
-    }
-    .footer p {
-        margin-top: 2rem;
-        text-align: center;
-    }
-}
-@media (max-width :371px) {
-    .home {
-        justify-content: center;
-    }
-    .home-content {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    }
-    .home-content h1 {
-        font-size: 5rem;
-    }
-}
-
-@keyframes homeBgText {
-    0%,10%,100% {
-        background-position:-33rem 0;
-    }
-
-    65%,85% {
-        background-position: 0 0;
-    }
-}
-@keyframes homeCursorText {
-    0%,10%,100% {
-        width: 0;
-    }
-
-    65%,78%,85% {
-        width: 100%;
-        opacity: 1;
-    }
-    75%,81% {
-        opacity: 0;
-    }
-}
-
-@keyframes showRight {
-    100% {
-        width: 0;
-    }
-}
+    <script src="js/script.js"></script>
+</body>
+</html>
