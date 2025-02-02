@@ -19,7 +19,7 @@ body {
 }
 section {
     background: black;
-    padding: 10000px;
+    padding: 10px;
     min-height: 100vh;
     color: var(--main-color);
     overflow-x: hidden;
@@ -204,7 +204,7 @@ p {
     min-height: auto;
     overflow-x: hidden;
     z-index: 10;
-    padding: 10rem;
+    
 }
 .Cv img {
     max-width: 100%; /* membuat gambar responsif */
@@ -253,19 +253,19 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1.2em; /* Sesuaikan dengan ukuran yang diinginkan */
+    font-size: 1.2em; 
 }
 
 .Cv a:hover img {
     filter: brightness(30%);
-    transition: filter 0.5s ease; /* Menambahkan transisi pada perubahan warna */
+    transition: filter 0.5s ease; 
 }
 
 .Cv a img {
     max-width: 100%;
     height: auto;
     padding: 1rem;
-    transition: filter 0.5s ease; /* Menambahkan transisi pada perubahan warna */
+    transition: filter 0.5s ease; 
 }
 
 

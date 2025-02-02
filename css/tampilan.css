@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color:#081b29;
+    --second-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00c39c;
+}
+
+html {
+    background: var(--bg-color);
+}
+section{
+    overflow-x: hidden;
+    padding: 10rem 9% 2rem;
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 6.5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background: transparent;
+}
+
+.logoku {
+    position: relative;
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar {
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.navbar a:hover {
+    color: var(--bg-color);
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .3s;   
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar a i {
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    transition: .5s;
+}
+
+.navbar a:hover i {
+    color: var(--main-color);
+}
+
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding: 10rem;
+}
+
+.gambar {
+    display: flex;
+    justify-content: center; /* Agar gambar berada di tengah */
+    padding: 2rem;
+    overflow-x: hidden;
+    height: auto; /* Hapus tinggi tetap */
+    max-width: 100%; /* Agar gambar tidak melebihi ukuran kontainer */
+}
+
+.gambar img {
+    width: 100%; /* Gambar akan mengisi 100% lebar kontainernya */
+    height: auto; /* Menjaga proporsi gambar */
+    object-fit: cover; /* Opsional, mengontrol bagaimana gambar menyesuaikan */
+    border-radius: 10px; /* Tambahkan radius jika ingin sudut melengkung */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Tambahkan efek bayangan jika perlu */
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 6.5%;
+    background: var(--second-bg-color);
+
+}
+.footer-text p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+}
+.footer-iconTop a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .3s;    
+}
+.footer-iconTop a:hover::before{
+    width: 100%;
+}
+.footer-iconTop a i {
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    transition: .5s;
+}
+.footer-iconTop a:hover i{
+    color: var(--main-color);
+}
+
+@media (max-width :1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width :991px) {
+
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+
+
+@media (max-width :462px) {
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        padding: 5rem; /* Kurangi padding di perangkat kecil */
+    }
+
+    .gambar {
+        padding: 1rem; /* Kurangi padding untuk gambar */
+    }
+
+    .gambar img {
+        width: 90%; /* Berikan sedikit ruang di sisi gambar */
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .logoku {
+        font-size: 1.8rem;
+    }
+
+    .header {
+        padding: 1rem 5%;
+    }
+
+    .navbar a {
+        padding: .15rem;
+    }
+
+    .navbar a i {
+        font-size: 1.4rem;
+    }
+   
+}
+
+@media (max-width: 520px) {
+    .title {
+        padding: 3rem; /* Padding lebih kecil untuk layar kecil */
+    }
+
+    .gambar img {
+        width: 100%; /* Gambar memenuhi lebar perangkat */
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .logoku {
+        font-size: 1.5rem;
+    }
+
+    .navbar a i {
+        font-size: 1.2rem;
+    }
+    
+    .judul {
+        padding: 150px;
+    }
+  
+}
+
+@media (max-width: 462px) {
+   
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .logoku {
+        font-size: 1.4rem;
+    }
+
+    .navbar a i {
+        font-size: 1.1rem;
+    }
+
+    .judul {
+        padding: 120px;
+    }
+    
+    section {
+        padding: 7rem 5%;
+    }
+    
+   
+}
+
+@media (max-width: 371px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .logoku {
+        font-size: 1.2rem;
+    }
+
+    .navbar a i {
+        font-size: 1rem;
+    }
+
+    
+
+    section {
+        padding: 5rem 3%;
+    }
+
+    .footer-text p {
+        font-size: 0.8rem;
+    }
+
+    .footer-iconTop a i {
+        font-size: 1.2rem;
+    }
+   
+}
