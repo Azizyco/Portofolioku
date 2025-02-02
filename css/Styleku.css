@@ -29,6 +29,7 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 .header{
     position: fixed;
@@ -76,11 +77,12 @@ body{
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
+    overflow-x: hidden;
 }
 .home {
     display: flex;
     align-items: center;
-    padding: 10 9% 2rem;
+    padding: 10 9%;
     background: url(me.png) no-repeat;
     background-size: cover;
     background-position: center;
@@ -251,6 +253,7 @@ section {
     gap: 2rem;
     background: var(--second-bg-color);
     padding: 0;
+    overflow: hidden;
 }
 
 .heading {
@@ -380,8 +383,8 @@ span{
     align-items: center;
     width: 15px;
     height: 15px;
-    background-color:transparent;  
-    padding: 17px 17px; 
+    background-color:transparent; /* Ganti kode warna dengan kode warna yang diinginkan */
+    padding: 17px 17px; /* Sesuaikan padding sesuai kebutuhan */
     color:var(--text-color); 
     border-radius: 50%;
     z-index: 1;
@@ -390,7 +393,7 @@ span{
     font-size: 2rem;
 }
 .custom-button:hover {
-    color: var(--second-bg-color); 
+    color: var(--second-bg-color); /* Warna tombol saat dihover */
     
 }
 .custom-button::before  {
