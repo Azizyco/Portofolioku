@@ -132,12 +132,13 @@ section{
     padding: 15px;
     padding-bottom: 4rem;
     overflow: hidden;
+    
   }
   
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-
+    
 
   }
   
@@ -148,11 +149,10 @@ section{
     object-fit: cover; /* Potong gambar agar tetap proporsional */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    
   }
   
-  .gallery img:hover {
-    transform: scale(1.1);
-  }
+ 
 
 
 
