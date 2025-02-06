@@ -11,13 +11,26 @@
 <body>
     <header class="header" id="awal">
         <a href="#" class="logoku">Azizy.co</a>
-        <nav class="navbar"><a href="https://azizyco.github.io/Portofolioku/MyPorto.html"><i class='bx bxs-left-arrow'></i></a></nav>
+        <nav class="navbar"><a href="MyPorto.html"><i class='bx bxs-left-arrow'></i></a></nav>
     </header>
 
     <section class="title">
         <img class="gambar"  src="contentgalery/titlr.png" alt="">
     </section>
-
+    <section class="galerysec">
+        <div class="gallery">
+            <img src="contentgalery/1.jpg" alt="#">
+            <img src="contentgalery/2.jpg" alt="#">
+            <img src="contentgalery/3.jpg" alt="#">
+            <img src="contentgalery/4.jpg" alt="#">
+            <img src="contentgalery/5.jpg" alt="#">
+            <img src="contentgalery/6.jpg" alt="#">
+            <img src="contentgalery/7.jpg" alt="#">
+            <img src="contentgalery/8.png" alt="#">
+            <img src="contentgalery/9.png" alt="#">
+            <img src="contentgalery/10.png" alt="#">
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer-text">
             <p>Copyright &copy; 2024 by Keyzz | Portofolioku. </p>
@@ -26,5 +39,30 @@
             <a href="#awal"><i class='bx bxs-up-arrow' ></i></a>
         </div>
     </footer>
+
+
+        <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    
+    <script>
+        gsap.from('.logoku'  ,  { duration:1.5, ease: "expoScale(0.5,7,none)",y: -500 } )
+        gsap.from('.navbar'  ,  { duration:1.5, ease: "rough({ template:none.out, strength: 1, points:20, taper:none, randomize:true, clamp:false })", y: -250 } )
+        gsap.from('.gambar' , {duration:1.1,ease: "rough({ template:none.out, strength: 1, points:20, taper:none, randomize:true, clamp:false })",y:-200});
+    </script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery img');
+
+        galleryImages.forEach((img, i) => {
+            img.dataset.aos = 'fade-up-right';
+            img.dataset.aosDelay = i * 100;
+        });
+
+        AOS.init({
+            once: true,
+            duration: 2000,
+        });
+    </script>
 </body>
 </html>

@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -106,7 +107,7 @@ section{
     align-items: center;
     flex-direction: column;
     min-height: auto;
-    padding: 10rem;
+    padding: 9.5rem;
 }
 
 .gambar {
@@ -119,12 +120,44 @@ section{
 }
 
 .gambar img {
-    width: 100%; /* Gambar akan mengisi 100% lebar kontainernya */
-    height: auto; /* Menjaga proporsi gambar */
-    object-fit: cover; /* Opsional, mengontrol bagaimana gambar menyesuaikan */
-    border-radius: 10px; /* Tambahkan radius jika ingin sudut melengkung */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Tambahkan efek bayangan jika perlu */
 }
+
+.galerysec {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 4rem;
+    overflow: hidden;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16; 
+    object-fit: cover; /* Potong gambar agar tetap proporsional */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+
+
+
+
+
 .footer{
     display: flex;
     justify-content: space-between;
@@ -295,7 +328,9 @@ section{
         padding: 7rem 5%;
     }
     
-   
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      }
 }
 
 @media (max-width: 371px) {
@@ -315,7 +350,9 @@ section{
         font-size: 1rem;
     }
 
-    
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
 
     section {
         padding: 5rem 3%;
