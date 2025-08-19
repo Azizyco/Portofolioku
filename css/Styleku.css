@@ -16,7 +16,6 @@
 
 :root {
     --bg-color:#081b29;
-    --second-bg-color:#112e42;
     --text-color:#ededed;
     --main-color:#00c39c;
 }
@@ -79,17 +78,81 @@ section {
     padding: 10rem 9% 2rem;
     overflow-x: hidden;
 }
+.backgroundhome {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 50%;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Animasi akan ditangani oleh JavaScript */
+}
+
+.backgroundhome:hover {
+    opacity: 0.7;
+}
+
+.backgroundhome::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(circle, rgba(0, 195, 156, 0.4), transparent);
+    border-radius: 50%;
+    filter: blur(20px);
+    z-index: 0;
+    animation: pulseLight 3s ease-in-out infinite;
+}
+
+@keyframes pulseLight {
+    0%, 100% {
+        opacity: 0.4;
+        width: 200px;
+    }
+    50% {
+        opacity: 0.7;
+        width: 250px;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 .home {
     display: flex;
     align-items: center;
     padding: 10 9%;
-    background: url(me.png) no-repeat;
-    background-size: cover;
-    background-position: center;
+
 }
 .home-content{
-    max-width: 60rem;
+    max-width:90rem;
     z-index: 99;
+    /* Animasi akan ditangani oleh JavaScript */
 }
 .home-content h1 {
     position: relative;
@@ -97,8 +160,6 @@ section {
     font-size: 6.5rem;
     font-weight: 700;
     line-height: 1.3;
-
-
 }
 .home-content h1 span{
     color: var(--text-color);
@@ -193,10 +254,13 @@ section {
 .home-sci {
     position: absolute;
     bottom: 4rem;
+    left: 9%;
     width: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10px;
+    z-index: 99;
+    /* Animasi akan ditangani oleh JavaScript */
 }
 .home-sci a {
     position: relative;
@@ -231,27 +295,13 @@ section {
 .home-sci a:hover::before{
     width: 100%;
 }
-.home-imgHover{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 48%;
-    height: 100%;
-    background: transparent;
-    transition: 3s;
-}
 
-.home-imgHover:hover{
-    background: var(--bg-color);
-    opacity: .8;
-}
 
 .about {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background: var(--second-bg-color);
     padding: 0;
     overflow: hidden;
 }
@@ -295,131 +345,13 @@ span{
     width: 15rem;
 }
 .btn-box.btns a::before {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
-
-
-
-
-.education {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: auto;
-    padding: 0;
-}
-.education .education-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-}
-.education-row .education-column {
-    flex: 1 1 40rem;
-    padding: 6rem;
-}
-.education-column .title {
-    font-size: 2.5rem;
-    margin: 0 0 3rem 2rem;
-}
-.education-column .education-box {
-    border-left: .2rem solid var(--main-color);
-}
-.education-box .education-content {
-    position: relative;
-    padding-left: 2rem;
-}
-
-.education-box .education-content::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -1.1rem;
-    width: 2rem;
-    height: 2rem;
-    background: var(--main-color);
-    border-radius: 50%;
-
-}
-
-.education-content .content {
-    position: relative;
-    padding: 1.5rem;
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-    margin-bottom: 2rem;
-    overflow: hidden;
-}
-.education-content .content::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--second-bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-.education-content .content:hover::before {
-    width: 100%;
-}
-.education-content .content .year {
-    font-size: 1.5rem;
-    color: var(--main-color);
-    padding-bottom: .5rem;
-}
-.education-content .content .year i {
-    padding-right: .5rem;
-}
-.education-content .content h3 {
-    font-size: 2rem;
-}
-.custom-button {
-    position: relative;
-    display: inline flex;
-    justify-content: center;
-    align-items: center;
-    width: 15px;
-    height: 15px;
-    background-color:transparent; /* Ganti kode warna dengan kode warna yang diinginkan */
-    padding: 17px 17px; /* Sesuaikan padding sesuai kebutuhan */
-    color:var(--text-color); 
-    border-radius: 50%;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    font-size: 2rem;
-}
-.custom-button:hover {
-    color: var(--second-bg-color); /* Warna tombol saat dihover */
-    
-}
-.custom-button::before  {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: var(--main-color);
-    z-index: -1;
-    transition: .5s;
-}
-.custom-button:hover::before{
-    width: 100%;
-}
-
-
-.education-content .content p {
-    font-size: 1.6rem;
-    padding-top: .5rem;
-}
 .skills {
     min-height: auto;
     padding: 0rem;
-    background: var(--second-bg-color);
+
 }
 .skills .skills-row {
     display: flex;
@@ -682,10 +614,10 @@ span{
 
 
 .contact {
-    padding: 0;
+
     min-height: auto;
     padding-bottom: 6rem;
-    background: var(--second-bg-color);
+
 }
 
 .contact form {
@@ -791,7 +723,7 @@ span{
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     z-index: -1;
     transition: .3s;    
 }
@@ -836,6 +768,10 @@ span{
     html {
         font-size: 55%;
     }
+    .backgroundhome {
+        width: 75%;
+        top: 0;
+    }
 }
 @media (max-width :991px) {
     .header {
@@ -850,12 +786,22 @@ span{
     .footer {
         padding: 2rem 4%;
     }
+    .backgroundhome {
+        width: 75%;
+        top: 10%;
+        
+    }
 }
 @media (max-width :768px) {
     .header {
         background: var(--bg-color);
     }
+    .home-sci {
+        position: absolute;
+        left: 38%;
+        bottom: 5%;
 
+    }
     #menu-icon {
         display: block;
     }
@@ -921,6 +867,7 @@ span{
     }
     .home-sci {
         width: auto;
+        left: 29%;
     }
     .home-sci a {
         width: 38px;
@@ -931,7 +878,10 @@ span{
     .home-content h1 {
         font-size: 5.2rem;
     }
-
+    .home-sci {
+        width: auto;
+        left: 27%;
+    }
     .education {
         padding:0;
     }
@@ -950,6 +900,11 @@ span{
 @media (max-width :371px) {
     .home {
         justify-content: center;
+    }
+    .home-sci {
+        width: auto;
+        left: 23%;
+
     }
     .home-content {
         display: flex;

@@ -1,0 +1,233 @@
+/* Canvas styling */
+#particleCanvas, .section-particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Menggunakan viewport width */
+    height: 100vh; /* Menggunakan viewport height */
+    z-index: 1;
+    object-fit: cover; /* Memastikan canvas menutupi seluruh area */
+}
+
+/* Floating elements */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Menggunakan viewport height */
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden; /* Mencegah elemen keluar dari container */
+}
+
+.float-element {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #005da0, transparent);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 12s ease-in-out infinite;
+    box-shadow: 0 0 20px #005da0;
+    /* Menggunakan persentase untuk posisi agar responsif */
+    transform-origin: center center;
+    will-change: transform; /* Optimasi performa animasi */
+}
+
+/* Light effects */
+.light-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 93, 160, 0.3), transparent);
+    filter: blur(60px);
+    animation: pulse 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+    max-width: 100%; /* Membatasi lebar maksimum */
+    max-height: 100vh; /* Membatasi tinggi maksimum */
+}
+
+.light-1 {
+    width: 30vw; /* Menggunakan viewport width */
+    height: 30vw; /* Menggunakan viewport width */
+    max-width: 400px; /* Batasi ukuran maksimum */
+    max-height: 400px; /* Batasi ukuran maksimum */
+    top: 10%;
+    right: 20%;
+    animation-delay: 0s;
+}
+
+.light-2 {
+    width: 25vw; /* Menggunakan viewport width */
+    height: 25vw; /* Menggunakan viewport width */
+    max-width: 300px; /* Batasi ukuran maksimum */
+    max-height: 300px; /* Batasi ukuran maksimum */
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.light-3 {
+    width: 35vw; /* Menggunakan viewport width */
+    height: 35vw; /* Menggunakan viewport width */
+    max-width: 500px; /* Batasi ukuran maksimum */
+    max-height: 500px; /* Batasi ukuran maksimum */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 4s;
+    opacity: 0.2;
+}
+
+/* Content styling */
+.content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff, #005da0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #005da0, #0074cc);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 93, 160, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 93, 160, 0.4);
+}
+
+.cta-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button:hover:before {
+    left: 100%;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translateY(-5%) translateX(3%) rotate(90deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-3%) translateX(-3%) rotate(180deg);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translateY(-4%) translateX(2%) rotate(270deg);
+        opacity: 0.7;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(1.1); /* Mengurangi skala untuk mencegah overflow */
+    }
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 0 20px rgba(0, 93, 160, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(0, 93, 160, 0.8), 0 0 40px rgba(0, 93, 160, 0.3);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .content p {
+        font-size: 1rem;
+    }
+    
+    .light-effect {
+        /* Tidak perlu !important karena sudah menggunakan vw */
+        transform: scale(0.9); /* Sedikit mengecilkan pada layar kecil */
+    }
+    
+    .float-element {
+        width: 6px;
+        height: 6px;
+    }
+    
+    /* Pastikan elemen floating tetap dalam container */
+    .floating-elements {
+        height: 100vh;
+    }
+}
+
+/* Tambahan untuk responsif pada layar sangat kecil */
+@media (max-width: 480px) {
+    .light-effect {
+        transform: scale(0.8); /* Mengecilkan lebih lanjut pada layar sangat kecil */
+    }
+    
+    .floating-elements {
+        height: 100%; /* Memastikan tinggi mengikuti container */
+    }
+    
+    /* Pastikan elemen float tidak terlalu besar pada layar kecil */
+    .float-element {
+        width: 4px;
+        height: 4px;
+        box-shadow: 0 0 10px #005da0; /* Mengurangi ukuran shadow */
+    }
+}
