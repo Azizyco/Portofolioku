@@ -253,14 +253,13 @@ section {
 }
 .home-sci {
     position: absolute;
-    bottom: 4rem;
+    bottom: 8.5rem;
     left: 9%;
     width: auto;
     display: flex;
     justify-content: center;
     gap: 10px;
     z-index: 99;
-    /* Animasi akan ditangani oleh JavaScript */
 }
 .home-sci a {
     position: relative;
@@ -614,15 +613,22 @@ span{
 
 
 .contact {
-
     min-height: auto;
     padding-bottom: 6rem;
+}
 
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
 .contact form {
     max-width: 70rem;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
 }
 .contact form .input-box {

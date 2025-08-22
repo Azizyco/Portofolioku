@@ -89,9 +89,9 @@ class ParticleSystem {
             particle.x, particle.y, 0,
             particle.x, particle.y, particle.size * 4
         );
-        glowGradient.addColorStop(0, '#005da0');
-        glowGradient.addColorStop(0.5, 'rgba(0, 93, 160, 0.4)');
-        glowGradient.addColorStop(1, 'rgba(0, 93, 160, 0)');
+        glowGradient.addColorStop(0, '#00c39c');
+        glowGradient.addColorStop(0.5, 'rgba(0, 160, 99, 0.4)');
+        glowGradient.addColorStop(1, 'rgba(0, 160, 80, 0)');
         
         this.ctx.fillStyle = glowGradient;
         this.ctx.beginPath();
@@ -100,7 +100,7 @@ class ParticleSystem {
         
         // Draw core particle
         this.ctx.globalAlpha = particle.opacity * pulse;
-        this.ctx.fillStyle = '#005da0';
+        this.ctx.fillStyle = '#00c39c';
         this.ctx.beginPath();
         this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         this.ctx.fill();
@@ -195,7 +195,7 @@ class InteractiveEffects {
                 position: absolute;
                 width: 2px;
                 height: 2px;
-                background: #005da0;
+                background:rgb(0, 160, 147);
                 border-radius: 50%;
                 left: ${Math.random() * 100}%;
                 top: ${Math.random() * 100}%;

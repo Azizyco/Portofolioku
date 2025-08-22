@@ -7,12 +7,14 @@
     <title>Portofolioku</title>
     <link rel="stylesheet" href="css/Styleku.css">
     <link rel="stylesheet" href="css/Styleback.css">
+    <link rel="stylesheet" href="css/chatbot.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="js/particles.js"></script>
     <script src="js/responsive-effects.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/section-effects.js"></script>
+    <script src="js/chatbot.js"></script>
 </head>
 <body>
     <header class="header">
@@ -65,18 +67,12 @@
     <section class="about" id="about">
         
         <h2 data-aos="fade-down" data-aos-duration="1500" class="heading">About <span>Me</span></h2>
-        <div data-aos="zoom-in-down" data-aos-duration="1500" class="about-img">
-            <img src="Profil.png" alt="">
-            <span class="circle spin"></span>
-        </div>
 
         <div class="about-content">
-            <h3 data-aos="fade-right" data-aos-duration="3000"  >Frontend Dev & Designer</h3>
-            <p data-aos="fade-left" data-aos-duration="3000" data-aos-delay="200"> I'am  Muhammad Miftah Nur Azizy. I was born in a small town in Indonesia, Central Java, Ambarawa City. I have many hobbies such as drawing, coding and playing games. I am currently studying at a state university in Yogyakarta which is also called the Blue Campus, it is Yogyakarta State University .and my life story can be said to be unique because......</p>
+            
+            <p data-aos="fade-left" data-aos-duration="3000" data-aos-delay="200"> Hi, I'm me Muhammad Miftah Nur Azizy. I was born in a small town in Indonesia, Central Java, Ambarawa City. I have various hobbies that make my life colorful, such as drawing, coding, and playing games. Since childhood, the world of graphic design and the joy of gaming has been an integral part of my life. Gaming is not just entertainment for me, it is also a way for me to explore new worlds, hone my tactical skills, and discover inspiring stories. I find joy and challenge in every game I play, and they often serve as a source of inspiration in my graphic design work. Apart from playing games, I also have a strong interest in the world of graphic design. Since I was in high school, I have started to be actively involved as a designer or decorator at various school events, such as sporting events, art performances and school celebrations. This experience has enriched my knowledge and skills in the field of graphic design, as well as giving me the opportunity to learn about event management and teamwork. Currently, I am pursuing my dream at one of the State Universities in Yogyakarta, known as the Blue Campus, namely Yogyakarta State University. Here, I continue to develop my skills in graphic design and information technology, while maintaining my passion and enthusiasm for gaming. My life story can be said to be unique because I believe that every experience and hobby I have had has shaped me into the individual I am today.</p>
 
-            <div class="btn-box btns">
-                <a data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000" href="https://azizyco.github.io/Portofolioku/About.html"class="btn">Read More</a>
-            </div>
+
         
         </div>
  
@@ -212,27 +208,49 @@
        
         <h2 data-aos="fade-down" data-aos-duration="1500" class="heading">Contact <span>Me</span></h2>
 
-        <form action="https://formspree.io/f/xrgnqakw" method="POST">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text"placeholder="Full Name" name="name" required>
-                    <span class="focus"></span>
+        <div class="contact-wrapper">
+            <form action="https://formspree.io/f/xrgnqakw" method="POST">
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Full Name" name="name" required>
+                        <span class="focus"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Email Address" name="email" required>
+                        <span class="focus"></span>
+                    </div>
                 </div>
-                <div class="input-field">
-                    <input type="text"placeholder="Email Address" name="email" required>
-                    <span class="focus"></span>
-                </div>
-            </div>
 
-            <div class="textarea-field">
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Massage" required></textarea>
-                <span class="focus"></span>
+                <div class="textarea-field">
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Your Massage" required></textarea>
+                    <span class="focus"></span>
+                </div>
+                
+                <div class="btn-box btns">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+
+            <!-- Chatbot Container -->
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <h3>Chat Assistant</h3>
+                    <button class="chatbot-toggle"><i class='bx bx-minus'></i></button>
+                </div>
+                <div class="chatbot-messages">
+                    <!-- Messages will be added here dynamically -->
+                </div>
+                <div class="chatbot-input">
+                    <input type="text" placeholder="Type your message...">
+                    <button><i class='bx bx-send'></i></button>
+                </div>
             </div>
-            
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
-            </div>
-        </form>
+        </div>
+
+        <!-- Mobile Chatbot Toggle Button -->
+        <div class="chatbot-fab">
+            <i class='bx bx-message-dots'></i>
+        </div>
     </section>
     
  
