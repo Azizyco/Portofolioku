@@ -222,6 +222,17 @@
         width: calc(100% - 4rem);
         height: 40rem;
         bottom: 8rem;
+        /* Prevent container from being pushed up by virtual keyboard */
+        position: fixed;
+        /* Higher z-index to ensure it stays on top */
+        z-index: 1001;
+    }
+    
+    /* Ensure input field stays visible when keyboard appears */
+    .chatbot-input {
+        position: relative;
+        z-index: 1002;
+        background-color: var(--chatbot-bg-color);
     }
     
     .message {

@@ -18,6 +18,19 @@ async function query(data) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Prevent document clicks from closing chatbot when it's active
+    document.addEventListener('click', function(e) {
+        const chatbotContainer = document.querySelector('.chatbot-container');
+        const chatbotFab = document.querySelector('.chatbot-fab');
+        
+        // If clicking outside chatbot and not on the toggle button, close chatbot
+        if (chatbotContainer && chatbotContainer.classList.contains('active')) {
+            if (!chatbotContainer.contains(e.target) && e.target !== chatbotFab && !chatbotFab.contains(e.target)) {
+                chatbotContainer.classList.remove('active');
+            }
+        }
+    });
+    
     // Elements
     const chatbotContainer = document.querySelector('.chatbot-container');
     const chatbotToggle = document.querySelector('.chatbot-toggle');
@@ -30,6 +43,25 @@ document.addEventListener('DOMContentLoaded', function() {
     if (chatbotFab) {
         chatbotFab.addEventListener('click', function() {
             chatbotContainer.classList.toggle('active');
+        });
+    }
+    
+    // Prevent chatbot from closing when interacting with input
+    if (chatbotContainer) {
+        chatbotContainer.addEventListener('click', function(e) {
+            // Prevent event from bubbling up to document
+            e.stopPropagation();
+        });
+    }
+    
+    // Add event listener to input to prevent closing on focus
+    if (chatbotInput) {
+        chatbotInput.addEventListener('focus', function(e) {
+            e.stopPropagation();
+        });
+        
+        chatbotInput.addEventListener('click', function(e) {
+            e.stopPropagation();
         });
     }
     
