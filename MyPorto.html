@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Portofolioku</title>
     <link rel="stylesheet" href="css/Styleku.css">
     <link rel="stylesheet" href="css/Styleback.css">
@@ -293,7 +293,7 @@
         <h2 data-aos="fade-down" data-aos-duration="1500" class="heading">Contact <span>Me</span></h2>
 
         <div class="contact-wrapper">
-            <form action="https://formspree.io/f/xrgnqakw" method="POST">
+            <form action="https://formspree.io/f/xrgnqakw" method="POST" id="contactForm">
                 <div class="input-box">
                     <div class="input-field">
                         <input type="text" placeholder="Full Name" name="name" required>
@@ -358,7 +358,35 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        // Mencegah refresh halaman saat animasi AOS dijalankan
+        startEvent: 'DOMContentLoaded',
+        disableMutationObserver: false,
+        once: false,
+        mirror: false,
+        // Tambahkan opsi untuk perangkat mobile
+        disable: function() {
+          // Nonaktifkan AOS pada perangkat dengan layar kecil jika menyebabkan masalah
+          return window.innerWidth < 768 && 'ontouchstart' in window;
+        }
+      });
+      
+      // Mencegah perilaku default pada perangkat touch
+      document.addEventListener('touchstart', function(e) {
+        if (e.target.hasAttribute('data-aos')) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+      
+      // Mencegah refresh halaman pada elemen dengan data-aos
+      document.addEventListener('DOMContentLoaded', function() {
+        const aosElements = document.querySelectorAll('[data-aos]');
+        aosElements.forEach(function(element) {
+          element.addEventListener('click', function(e) {
+            e.preventDefault();
+          });
+        });
+      });
     </script>
 
     <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
@@ -372,6 +400,54 @@
 	VanillaTilt.init(document.querySelectorAll(".box-projek"));
 </script>
 
+    <!-- Prevent form refresh -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mencegah refresh halaman saat form disubmit
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Gunakan Fetch API untuk mengirim form secara asynchronous
+                    fetch(this.action, {
+                        method: this.method,
+                        body: new FormData(this),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Tampilkan pesan sukses
+                            alert('Pesan berhasil dikirim!');
+                            this.reset(); // Reset form
+                        } else {
+                            // Tampilkan pesan error
+                            alert('Terjadi kesalahan. Silakan coba lagi.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Terjadi kesalahan. Silakan coba lagi.');
+                    });
+                });
+            }
+            
+            // Mencegah refresh halaman saat animasi AOS ditampilkan
+            const aosElements = document.querySelectorAll('[data-aos]');
+            aosElements.forEach(function(element) {
+                element.addEventListener('animationstart', function(e) {
+                    e.preventDefault();
+                });
+                
+                element.addEventListener('animationend', function(e) {
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
+    
     <script src="js/script.js"></script>
     <script src="js/scriptback.js"></script>
 </body>

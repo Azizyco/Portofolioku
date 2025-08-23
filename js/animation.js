@@ -1,5 +1,31 @@
 // Script untuk memastikan animasi pada home-sci berfungsi dengan benar
 document.addEventListener('DOMContentLoaded', function() {
+    // Mencegah refresh halaman saat animasi AOS ditampilkan
+    window.addEventListener('scroll', function(e) {
+        // Mencegah refresh halaman saat scroll (yang mungkin memicu animasi AOS)
+        const aosElements = document.querySelectorAll('[data-aos]');
+        if (aosElements.length > 0) {
+            // Jika ada elemen dengan data-aos yang terlihat, cegah perilaku default
+            aosElements.forEach(function(element) {
+                const rect = element.getBoundingClientRect();
+                const isVisible = (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+                
+                if (isVisible) {
+                    // Jika elemen terlihat, pastikan tidak ada refresh halaman
+                    element.style.pointerEvents = 'none'; // Mencegah klik yang mungkin menyebabkan refresh
+                    setTimeout(function() {
+                        element.style.pointerEvents = 'auto'; // Kembalikan pointer events setelah animasi selesai
+                    }, 1000); // Sesuaikan dengan durasi animasi
+                }
+            });
+        }
+    }, { passive: true }); // Gunakan passive: true untuk performa yang lebih baik
+
     // Menambahkan class untuk animasi setelah halaman dimuat
     setTimeout(function() {
         const homeSci = document.querySelector('.home-sci');
