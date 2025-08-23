@@ -1,4 +1,22 @@
 // Chatbot functionality
+
+// API query function
+async function query(data) {
+    const response = await fetch(
+        "http://localhost:3000/api/v1/prediction/e2f702f9-2b2b-4709-8063-509f84bf9c27",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        }
+    );
+    
+    const result = await response.json();
+    return result;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Elements
     const chatbotContainer = document.querySelector('.chatbot-container');
@@ -30,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Send message function
-    function sendMessage() {
+    async function sendMessage() {
         const message = chatbotInput.value.trim();
         
         if (message !== '') {
@@ -43,14 +61,43 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show typing indicator
             showTypingIndicator();
             
-            // Simulate bot response (replace with actual API call later)
-            setTimeout(() => {
+            try {
+                // Call API with user message
+                const response = await query({"question": message});
+                
                 // Remove typing indicator
                 removeTypingIndicator();
                 
                 // Add bot response
-                addMessage('Ini adalah wadah chatbot saja. Integrasi dengan database akan dilakukan sendiri oleh pengguna.', 'bot');
-            }, 1500);
+                // Periksa struktur respons API dan tampilkan bagian yang sesuai
+                let botResponse = 'Maaf, saya tidak dapat memproses permintaan Anda saat ini.';
+                
+                if (response) {
+                    if (typeof response === 'string') {
+                        botResponse = response;
+                    } else if (response.response) {
+                        botResponse = response.response;
+                    } else if (response.message) {
+                        botResponse = response.message;
+                    } else if (response.output) {
+                        botResponse = response.output;
+                    } else if (response.text) {
+                        botResponse = response.text;
+                    } else if (response.answer) {
+                        botResponse = response.answer;
+                    }
+                }
+                
+                addMessage(botResponse, 'bot');
+            } catch (error) {
+                console.error('Error querying API:', error);
+                
+                // Remove typing indicator
+                removeTypingIndicator();
+                
+                // Add error message
+                addMessage('Maaf, terjadi kesalahan saat menghubungi server. Silakan coba lagi nanti.', 'bot');
+            }
         }
     }
     
@@ -103,6 +150,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add initial bot message
     setTimeout(() => {
-        addMessage('Halo! Ini adalah wadah chatbot. Silakan kirim pesan untuk melihat tampilan percakapan.', 'bot');
+        addMessage('Silahkan tanya terkait potofolio atau data yang perlu ditanyakan dalam portofolio ini.', 'bot');
     }, 500);
 });
