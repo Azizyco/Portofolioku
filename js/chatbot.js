@@ -52,15 +52,37 @@ document.addEventListener('DOMContentLoaded', function() {
             // Prevent event from bubbling up to document
             e.stopPropagation();
         });
+        
+        chatbotContainer.addEventListener('touchstart', function(e) {
+            // Prevent event from bubbling up to document
+            e.stopPropagation();
+        });
+        
+        chatbotContainer.addEventListener('touchend', function(e) {
+            // Prevent event from bubbling up to document
+            e.stopPropagation();
+        });
     }
     
     // Add event listener to input to prevent closing on focus
     if (chatbotInput) {
         chatbotInput.addEventListener('focus', function(e) {
             e.stopPropagation();
+            // Prevent default behavior that might cause refresh
+            e.preventDefault();
         });
         
         chatbotInput.addEventListener('click', function(e) {
+            e.stopPropagation();
+            // Prevent default behavior that might cause refresh
+            e.preventDefault();
+        });
+        
+        chatbotInput.addEventListener('touchstart', function(e) {
+            e.stopPropagation();
+        });
+        
+        chatbotInput.addEventListener('touchend', function(e) {
             e.stopPropagation();
         });
     }
