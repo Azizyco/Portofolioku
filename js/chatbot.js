@@ -18,6 +18,11 @@ async function query(data) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Mencegah zoom saat input di fokus pada perangkat mobile
+    const metaViewport = document.querySelector('meta[name=viewport]');
+    if (metaViewport) {
+        metaViewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0';
+    }
     // Elements
     const chatbotContainer = document.querySelector('.chatbot-container');
     const chatbotToggle = document.querySelector('.chatbot-toggle');
@@ -134,17 +139,56 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Send message on button click
-    if (chatbotSendBtn) {
-        chatbotSendBtn.addEventListener('click', sendMessage);
+    // Mencari parent form jika ada
+    const chatbotForm = chatbotInput ? chatbotInput.closest('form') : null;
+    
+    // Jika input berada dalam form, tambahkan event listener untuk mencegah submit default
+    if (chatbotForm) {
+        chatbotForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah form submit default yang menyebabkan refresh
+            sendMessage();
+        });
     }
     
-    // Send message on Enter key
+    // Send message on button click (untuk desktop dan mobile)
+    if (chatbotSendBtn) {
+        // Event untuk klik mouse
+        chatbotSendBtn.addEventListener('click', function(e) {
+            e.preventDefault(); // Mencegah perilaku default
+            sendMessage();
+        });
+        
+        // Event untuk sentuhan pada perangkat mobile
+        chatbotSendBtn.addEventListener('touchstart', function(e) {
+            e.preventDefault(); // Mencegah perilaku default
+            sendMessage();
+        });
+    }
+    
+    // Send message on Enter key (keypress event)
     if (chatbotInput) {
+        // Gunakan input event untuk menangani keyboard virtual pada mobile
         chatbotInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
+                e.preventDefault(); // Mencegah perilaku default
                 sendMessage();
             }
+        });
+        
+        // Tambahkan event listener untuk keyboard virtual pada mobile
+        chatbotInput.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault(); // Mencegah perilaku default
+                sendMessage();
+            }
+        });
+        
+        // Tambahkan event listener untuk focus dan blur untuk mengatasi masalah keyboard virtual
+        chatbotInput.addEventListener('focus', function() {
+            // Scroll ke input saat keyboard muncul
+            setTimeout(function() {
+                chatbotInput.scrollIntoView(false);
+            }, 300);
         });
     }
     
