@@ -23,7 +23,7 @@ window.onscroll = () => {
 
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + '] ').classList.add('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
             sec.classList.add('show-animate');
         }
