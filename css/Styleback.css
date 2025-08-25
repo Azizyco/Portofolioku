@@ -27,9 +27,9 @@
     height: 8px;
     background: radial-gradient(circle, #00c39c, transparent);
     border-radius: 50%;
-    opacity: 0.6;
+    opacity: 0.4;
     animation: float 12s ease-in-out infinite;
-    box-shadow: 0 0 20px #007a62;
+    box-shadow: 0 0 10px #007a62;
     /* Menggunakan persentase untuk posisi agar responsif */
     transform-origin: center center;
     will-change: transform; /* Optimasi performa animasi */
@@ -39,8 +39,8 @@
 .light-effect {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 93, 160, 0.3), transparent);
-    filter: blur(60px);
+    background: radial-gradient(circle, rgba(0, 93, 160, 0.15), transparent);
+    filter: blur(30px);
     animation: pulse 6s ease-in-out infinite;
     pointer-events: none;
     z-index: 2;

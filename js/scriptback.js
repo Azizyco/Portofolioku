@@ -23,7 +23,7 @@ class ParticleSystem {
     
     createParticles() {
         this.particles = [];
-        const particleCount = Math.floor((this.canvas.width * this.canvas.height) / 12000);
+        const particleCount = Math.floor((this.canvas.width * this.canvas.height) / 24000);
         
         for (let i = 0; i < particleCount; i++) {
             this.particles.push({
@@ -83,7 +83,7 @@ class ParticleSystem {
         
         // Draw glow effect
         this.ctx.save();
-        this.ctx.globalAlpha = particle.opacity * pulse * 0.6;
+        this.ctx.globalAlpha = particle.opacity * pulse * 0.4;
         
         const glowGradient = this.ctx.createRadialGradient(
             particle.x, particle.y, 0,

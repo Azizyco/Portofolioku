@@ -1,5 +1,12 @@
 // Script untuk menerapkan efek canvas, floating-elements, dan light-effect di berbagai section
 document.addEventListener('DOMContentLoaded', function() {
+    // Hapus light-effect dari section selain home jika ada
+    document.querySelectorAll('section .light-effect').forEach(effect => {
+        if (!effect.closest('#home')) {
+            effect.remove();
+        }
+    });
+
     // Fungsi untuk membuat elemen canvas
     function createParticleCanvas(sectionId) {
         const section = document.getElementById(sectionId);
@@ -292,8 +299,8 @@ document.addEventListener('DOMContentLoaded', function() {
             createFloatingElements(sectionId);
         }
         
-        // Skip pembuatan light-effects untuk home section karena sudah ada
-        if (sectionId !== 'home' || !document.querySelector('.home .light-effect')) {
+        // Tambahkan light-effect hanya pada section home
+        if (sectionId === 'home' && !document.querySelector('.home .light-effect')) {
             createLightEffects(sectionId);
         }
         
